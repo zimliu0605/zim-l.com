@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hi, I'm Zim.">
+  <title>HI, I'M ZIM.</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #000;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+                   Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(900px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 100px 0 80px;
+    }
+
+    header {
+      min-height: 75vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hello {
+      font-size: clamp(56px, 11vw, 120px);
+      line-height: 0.95;
+      letter-spacing: -0.06em;
+      font-weight: 700;
+      margin-bottom: 32px;
+    }
+
+    .intro {
+      max-width: 650px;
+      font-size: clamp(20px, 3vw, 30px);
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      color: #f2f2f2;
+    }
+
+    section {
+      padding: 100px 0;
+      border-top: 1px solid #222;
+    }
+
+    .section-title {
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #777;
+      margin-bottom: 40px;
+      font-weight: 600;
+    }
+
+    .about {
+      max-width: 700px;
+      font-size: clamp(21px, 3vw, 30px);
+      line-height: 1.45;
+      letter-spacing: -0.025em;
+    }
+
+    .about p + p {
+      margin-top: 28px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: #222;
+      border: 1px solid #222;
+    }
+
+    .card {
+      background: #000;
+      padding: 36px;
+      min-height: 190px;
+    }
+
+    .card h3 {
+      font-size: 17px;
+      letter-spacing: 0.08em;
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+
+    .card p {
+      color: #aaa;
+      font-size: 17px;
+      line-height: 1.7;
+    }
+
+    .countries {
+      font-size: clamp(24px, 4vw, 40px);
+      line-height: 1.5;
+      letter-spacing: -0.025em;
+    }
+
+    .more {
+      display: block;
+      margin-top: 35px;
+      color: #777;
+      font-size: 18px;
+      font-style: italic;
+    }
+
+    .love,
+    .projects {
+      font-size: clamp(24px, 4vw, 40px);
+      line-height: 1.5;
+      letter-spacing: -0.025em;
+    }
+
+    .socials {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .social {
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #333;
+      border-radius: 50%;
+      transition: all 0.25s ease;
+    }
+
+    .social:hover {
+      border-color: #fff;
+      transform: translateY(-4px);
+    }
+
+    .social svg {
+      width: 22px;
+      height: 22px;
+      fill: none;
+      stroke: #fff;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .social.x svg {
+      stroke-width: 1.5;
+    }
+
+    .social.tiktok svg {
+      fill: #fff;
+      stroke: none;
+    }
+
+    footer {
+      padding-top: 80px;
+      color: #555;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: calc(100% - 32px);
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      header {
+        min-height: 85vh;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 28px;
+        min-height: auto;
+      }
+
+      .hello {
+        margin-bottom: 24px;
+      }
+
+      .intro {
+        font-size: 22px;
+      }
+
+      .socials {
+        gap: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <header>
+      <h1 class="hello">HI, I'M ZIM.</h1>
+
+      <p class="intro">
+        I’m into psychology, music, design, production, education, and culture.
+      </p>
+    </header>
+
+
+    <section>
+      <div class="section-title">About Me</div>
+
+      <div class="about">
+        <p>
+          I’m just someone who likes making things, going places, and enjoying what I do.
+        </p>
+
+        <p>
+          I’m into video, music, design, and creative projects.
+          I also enjoy teaching and sharing things I know with other people.
+        </p>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="section-title">What I Do</div>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>PRODUCTION</h3>
+          <p>
+            Video production · Editing · Creative projects
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>MUSIC</h3>
+          <p>
+            Piano · Music production · Concerts
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>DESIGN</h3>
+          <p>
+            Visual design · Branding · Creative projects
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>PSYCHOLOGY</h3>
+          <p>
+            Human behavior · Consumer psychology · Culture
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>TEACHING</h3>
+          <p>
+            Teaching · Sharing knowledge · Helping people understand things
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section>
+      <div class="section-title">Travel</div>
+
+      <div class="countries">
+        Sri Lanka · Thailand · Singapore · Japan · South Korea · Russia · Finland · Norway · Australia · United Kingdom · New Zealand · Canada · United States
+      </div>
+
+      <span class="more">More to come.</span>
+    </section>
+
+
+    <section>
+      <div class="section-title">Things I Love</div>
+
+      <div class="love">
+        Music · Film · Photography · Travel · Fashion · Design · Culture
+      </div>
+    </section>
+
+
+    <section>
+      <div class="section-title">Projects</div>
+
+      <div class="projects">
+        Video · Music · Design · School productions · Creative stuff
+      </div>
+    </section>
+
+
+    <section>
+      <div class="section-title">Contact</div>
+
+      <div class="socials">
+
+        <!-- Instagram -->
+        <a
+          class="social"
+          href="https://www.instagram.com/zzz1m_liu"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram"
+        >
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+            <circle cx="12" cy="12" r="4"></circle>
+            <circle cx="17.5" cy="6.5" r="1"></circle>
+          </svg>
+        </a>
+
+
+        <!-- X -->
+        <a
+          class="social x"
+          href="https://x.com/zzzzzzim0605"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="X"
+        >
+          <svg viewBox="0 0 24 24">
+            <path d="M5 4L19 20"></path>
+            <path d="M19 4L5 20"></path>
+          </svg>
+        </a>
+
+
+        <!-- TikTok -->
+        <a
+          class="social tiktok"
+          href="https://www.tiktok.com/@zimliu100605"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="TikTok"
+        >
+          <svg viewBox="0 0 24 24">
+            <path d="M15.5 3v11.2a4.8 4.8 0 1 1-4.8-4.8c.45 0 .88.06 1.28.18v3.1a2 2 0 1 0 .42 1.3V7.2c1.8 1.35 3.55 2.02 5.1 2.02V6.1c-.95-.04-1.55-.34-2-.72V3h0z"></path>
+          </svg>
+        </a>
+
+      </div>
+    </section>
+
+
+    <footer>
+      © 2026 ZIM
+    </footer>
+
+  </main>
+
+</body>
+</html>
